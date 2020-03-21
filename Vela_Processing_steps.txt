@@ -1,0 +1,62 @@
+Dear all,
+
+This concerns the data on the Vela pulsar, for which
+you may have already received the links...
+These data could be used to
+familiarize with typical spectral & pulsar analysis.
+
+These are ascii files, each having one-second worth of data on the Vela
+pulsar, recorded at Ooty, wherein the signal voltages in the two columns
+represent data from the N and S arrays separately.
+These data correspond to Nyquist sampled data across 16.5 MHz bandwidth
+centered at 326.5 MHz. Thus time-interval between each row is (1/33) microseconds.
+(Being raw voltage data, the distribution function is expected to be Gaussian...
+something that you may wish to verify yourself).
+
+Typical analysis will involve
+
+1) taking 512 points (from a chosen column)
+at a time, Fourier transforming them,
+2) taking one half of the spectrum (corresponding to
+the +ve frequencies) and
+3) computing modulus-square for each of the 256 spectral
+channels to obtain power (spectrum) as a function of channel number (1 to 256).
+Each such power spectrum corresponds a time interval of (or as averaged over)
+(512/33) microseconds.
+
+4) Such power spectra may be averaged together in sets of M, based on the desired time
+resolution ... given by (M*512/33) microseconds.  (say, M=60, corresponding to 1 msec resolution)
+
+5) The 256-point power spectra thus averaged may be stacked one after another
+to form a 2-d matrix of intensities, as a function of frequency and time.
+
+When done properly, you can expect to see a set of (about 11) dispersed pulses in the
+these 2-d spectra (often called dynamic spectra) from the present data on Vela pulsar.
+
+Similar analysis can be done for the data in other column.
+To observe correlated signal between the two halves of the telescope,
+you may first compute the Fourier transform of each set of 512 points taken separately
+from the two columns and multiply (channel-wise) the spectrum of N by the complex
+conjugate of spectrum of S. And then follow steps 4 onward, for this cross-power-spectrum.
+
+Once you have such 2-d data (dynamic spectrum), one can fold it at the pulsar period, and
+also dedisperse it to obtain average profile. One also estimate the pulsar period and dispersion measure
+separately. You may also estimate the amount of broadening of the pulse due to interstellar scattering.
+
+Have fun with the data !
+
+Attaching one sample of analysis, on 1-second worth of data,
+and the files sent to you have similar duration data, at different times.
+I suggest you do coding in python, which I am told is the language of the
+future :)
+
+best,
+
+    --desh
+
+
+The attached plot (png file) shows another example..
+There might be a slips in the data (i.e. missing data --> lost time),
+which would give non-regular appearance (jumps in) of the pulse tracks.
+
+2 Attachments

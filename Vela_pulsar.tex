@@ -15,7 +15,7 @@
 \begin{document}
 \maketitle
 \paragraph{}
-This report briefly describes the data analysis that I have done on the observations of the Vela Pulsar with Ooty Radio Telescope. Ooty performed the observations centred on 326.5 MHz with a bandwidth of 16 MHz. The raw voltage data consists of 1 s obseving time from the Northern and Southern half of the telescope. The time interval between each voltage is 1/33 microseconds.
+This report briefly describes some data analysis on the observations of the vela pulsar with Ooty radio telescope. Ooty performed the observations centred on 326.5 MHz with a bandwidth of 16 MHz. The raw voltage data consists of 1 s obseving time from the Northern and Southern half of the telescope. The time interval between each voltage is 1/33 microseconds.
 \begin{multicols}{2}
 \section{Raw voltage}
 
@@ -30,15 +30,15 @@ The dynamic spectrum was obtained the same way as in Kishalay De report as follo
 	
 \end{itemize}
 
-The signals were from the two halves of the array were then, added incoherently to improve the Signal to Noise Ratio (SNR). Figure 2 the correlated signal. We can observe 11 dispersed pulses from the vela pulsar within the 1 s observations. 
+The signals from the two halves of the array were then, added incoherently to improve the Signal to Noise Ratio (SNR). Figure 2 illustrates the correlated signal. We can observe 11 dispersed pulses from the vela pulsar within the 1 s observations. 
 
 \section{Pulse properties}
-The channels width was increased to 257 KHz for a better SNR. Assuming a gaussian shape, we fit a single pulse from 3 different channels and estimate their arrival time. The time delay of the pulse between two frequency $f_1$ and $f_2$ , with $f_1 > f_2$,  is given by: 
+The channel width was increased to 257 KHz for a better SNR. Assuming a gaussian shape, we fit a single pulse from 3 different manually chosen channels and estimate their arrival time. The time delay of the pulse between two frequency $f_1$ and $f_2$ , with $f_1 > f_2$,  is given by: 
 \begin{equation}
 \Delta t \approx 4.15 \;(f_2^{-2} - f_1^{-2})\; \mbox{DM} \;\; \mbox{ms}
 \end{equation}
 
-where DM is the dispersion measure in (pc/cc). Equation 1 holds when $f_1$ and $f_2$ are in units of GHz. A single line $\Delta t = \mbox{DM}\delta f^{-2}$   was fitted with the data to calculate the DM where $\delta f^{-2}= 4.15 \;(f_2^{-2} - f_1^{-2})$. With the best fit of the line, the estimated DM is about 74.10 $\pm$ 10.2 pc/cc. The dedispersed dynamic spetrum and time series are shown in Figure 4. The pulsar period is calculated by applying a linear fit to the arrival times of each pulses in the dedispersed time series (see Figure 5), resulting into a period $\mbox{P} = 94.53 \pm 0.13 \; \mbox{ms}$. 
+where DM is the dispersion measure in (pc/cc). Equation 1 holds when $f_1$ and $f_2$ are in units of GHz. A single line $\Delta t = \mbox{DM}\delta f^{-2}$   was fitted with the data to calculate the DM where $\delta f^{-2}= 4.15 \;(f_2^{-2} - f_1^{-2})$. From the best linear fit (Figure 3d), the estimated DM is about 74.10 $\pm$ 10.2 pc/cc. The pulsar period is calculated by applying a linear fit to the arrival times of each pulse in the dedispersed time series (see Figure 5), resulting into a period $\mbox{P} = 94.53 \pm 0.13 \; \mbox{ms}$. 
      
 \end{multicols}
 
@@ -63,7 +63,7 @@ where DM is the dispersion measure in (pc/cc). Equation 1 holds when $f_1$ and $
 \begin{figure}[ht]
     \includegraphics[width=.9\linewidth, height=0.24\paperheight]{correlated_sig.png} 
   	\label{fig:dscorr}  
-  	\caption{Dynamic spectrum of the correlated signal. The frequency resolution is 64 KHz with a time resolution of 1 ms}
+  	\caption{Dynamic spectrum of the correlated signal. The frequency resolution is 64 KHz with a time resolution of 1 ms.}
 \end{figure}
 
 \newpage
@@ -89,7 +89,7 @@ where DM is the dispersion measure in (pc/cc). Equation 1 holds when $f_1$ and $
     \includegraphics[width=0.9\textwidth]{linedt.png} 
     \caption{}
   \end{subfigure}
-  \caption{The single pulse and best fit gaussian at 328.04, 326.24, 324.69 MHz are shown in figure a, b and c. The panel is showing the best line fit to estimate the dispersion measure.}
+  \caption{The single pulse and best fit gaussian at 328.04, 326.24 and 324.69 MHz are shown in figure a, b and c. The panel d is showing the best linear fit to estimate the dispersion measure.}
 \end{figure}
 
 \begin{figure}
@@ -102,7 +102,7 @@ where DM is the dispersion measure in (pc/cc). Equation 1 holds when $f_1$ and $
   	\centering
     \includegraphics[width=0.9\textwidth]{dedtimes.png}
   \end{subfigure}
-  \caption{Top: Dynamic spectrum after a dispersive delay correction with $\mbox{DM} $ value of $ 74.1 \pm 10.2$ pc/cc. Bottom: The total power of the signal summed across the frequency channels.} 
+  \caption{Top panel: Dynamic spectrum after a dispersive delay correction with $\mbox{DM} $ value of $ 74.1 \pm 10.2$ pc/cc. Bottom panel: The total power of the signal summed across the frequency channels.} 
 \end{figure}
 
 \newpage
